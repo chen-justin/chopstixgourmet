@@ -6,7 +6,7 @@ body {
   text-decoration: none;
   margin: 0;
   padding: 0;
-  color: #1976d2;
+  color: white;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -71,17 +71,25 @@ body {
 }
 
 .splash {
-  height: 400px;
+  height: 800px;
   font-size: 40px;
+  padding-top: 20px;
   font-weight: bold;
   color: white;
-  background-color: #2b2b2b;
   display: flex;
 }
 
 .splash span {
   margin: auto;
   align-items: center;
+  padding: 100px 200px;
+  background-color: rgba(43, 43, 43, .8);
+}
+
+.content-container {
+  padding: 20px;
+  background-color: rgba(253, 253, 253, 1);
+  color: rgba(43, 43, 43, 1);
 }
 
 @media only screen and (min-width:800px) {
