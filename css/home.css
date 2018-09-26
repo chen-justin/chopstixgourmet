@@ -1,0 +1,195 @@
+body {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #212121; }
+  a a:hover {
+    color: red;
+    transition: .3s; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.nav-wrapper {
+  background-color: #212121; }
+  .nav-wrapper .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; }
+  .nav-wrapper a {
+    text-decoration: none;
+    color: #fafafa;
+    position: relative; }
+  .nav-wrapper .nav-items {
+    display: flex; }
+    .nav-wrapper .nav-items a:after, .nav-wrapper .nav-items a:visited:after {
+      content: '';
+      height: 3px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      background: #fafafa;
+      transition: 0.2s; }
+    .nav-wrapper .nav-items a:hover:after, .nav-wrapper .nav-items a:visited:hover:after {
+      width: 100%; }
+  .nav-wrapper .nav-item {
+    font-weight: bold;
+    padding: 10px 20px; }
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  font-weight: 600; }
+
+.parallax {
+  background-image: url("../images/chopstix_splash.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.splash {
+  display: flex;
+  height: 50vh; }
+  .splash span {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fafafa;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(33, 33, 33, 0.5); }
+
+.wrapper {
+  display: flex; }
+
+.locations {
+  color: #fafafa;
+  background-color: #212121;
+  margin: auto;
+  width: 100%; }
+  .locations .locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .locations .title {
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: bold; }
+
+.footer {
+  color: #fafafa;
+  background-color: #212121;
+  padding: 1rem; }
+
+/*
+* CARDS
+*/
+.card {
+  background-color: #ebebeb;
+  padding: 1rem 0;
+  padding-bottom: 3rem;
+  width: 100%;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+  color: #212121; }
+  .card .card-title {
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    vertical-align: middle;
+    font-weight: bold; }
+  .card .card-image {
+    width: 100%;
+    height: auto; }
+  .card .card-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2rem; }
+    .card .card-content li {
+      line-height: 1.5rem; }
+  .card .card-description {
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    vertical-align: center;
+    padding: 2rem 0;
+    width: 100%; }
+    .card .card-description p {
+      line-height: 1.5 rem; }
+  .card .card-links li {
+    margin-right: 1rem;
+    padding: .5rem 0; }
+  .card .card-links i {
+    padding-right: 1rem; }
+  .card .card-links a:hover {
+    color: #ff5050;
+    transition: .3s; }
+
+@media only screen and (min-width: 700px) {
+  .logo {
+    font-size: 2rem;
+    margin-left: 0; }
+  .splash span {
+    padding: 25vh 15vw; }
+  /*
+  * CARDS
+  */
+  .card {
+    width: 45%;
+    margin: 1rem auto;
+    /* Height of the Card's flavortext */ }
+    .card .card-description {
+      height: 2rem; }
+    .card .card-info {
+      display: inline; }
+    .card .hours p {
+      font-size: 1.2rem;
+      padding-bottom: .1rem; } }
+
+@media only screen and (min-width: 1000px) {
+  .logo {
+    font-size: 2rem;
+    margin-left: 0; }
+  /*
+  * CARDS
+  */
+  .card {
+    width: 31%; } }
+
+@media only screen and (min-width: 1600px) {
+  .nav-container {
+    margin: 0 auto;
+    width: 1600px; }
+  .splash span {
+    padding: 30vh 15vw; }
+  .title {
+    text-align: center; }
+  .locations-container {
+    margin: 0 auto;
+    width: 1600px;
+    padding: 0; }
+  .card {
+    margin: 1rem;
+    width: 32%;
+    margin: 1rem auto; } }

@@ -203,6 +203,14 @@ ul {
     padding: 30vh 15vw;
   }
 
+  .card-info {
+    display: flex;
+  }
+
+  .card-links {
+    width: 55%;
+  }
+
 
   /*
   * CARDS

@@ -1,0 +1,24 @@
+{
+  "name": "chopstixgourmet",
+  "version": "1.0.0",
+  "description": "A website for Chopstix Gourmet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chen-justin/chopstixgourmet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chen-justin/chopstixgourmet/issues"
+  },
+  "homepage": "https://github.com/chen-justin/chopstixgourmet#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "scss": "^0.2.4"
+  }
+}
