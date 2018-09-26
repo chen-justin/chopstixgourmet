@@ -1,18 +1,32 @@
 
-body,html {
-  height: 100%;
-}
 body {
   text-decoration: none;
   margin: 0;
   padding: 0;
+  font-size: 16px;
   color: white;
   font-family: 'Montserrat', sans-serif;
+  background-color: rgba(250, 250, 250, 1);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-wrapper {
   background-color: #2b2b2b;
 }
+
 .nav-container{
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +38,7 @@ body {
 .logo{
   margin-left: auto;
   margin-right: auto;
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -71,32 +85,107 @@ body {
 }
 
 .splash {
-  height: 800px;
-  font-size: 40px;
-  padding-top: 20px;
+  font-size: 3rem;
   font-weight: bold;
   color: white;
+  font-family: 'Open Sans';
   display: flex;
 }
 
 .splash span {
+  padding: 15vh 2vw;
   margin: auto;
+  width: 100%;
   align-items: center;
-  padding: 100px 200px;
-  background-color: rgba(43, 43, 43, .8);
+  text-align: center;
+  background-color: rgba(43, 43, 43, .1);
 }
 
 .content-container {
-  padding: 20px;
-  background-color: rgba(253, 253, 253, 1);
   color: rgba(43, 43, 43, 1);
 }
 
+/*
+* LOCATIONS
+*/
+
+.locations-container{
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.locations h1{
+  text-align: center;
+}
+
+/*
+* CARDS
+*/
+.card {
+  background-color: rgba(43, 43, 43, 1);
+  padding: 2rem;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.card-title {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: solid white;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-description {
+  font-size: 1.2rem;
+  overflow-wrap: break-word;
+  vertical-align: center;
+  width: 100%;
+  height: 5rem;
+}
+
+.card-links li{
+  margin-right: 1rem;
+  padding: .5rem 0;
+}
+
+.card-links i{
+  padding-right: 1rem;
+}
+
+.hours li{
+  text-align: justify;
+}
+
+
+
 @media only screen and (min-width:800px) {
   .logo{
-    font-size: 30px;
+    font-size: 1rem;
     margin-left: 0;
   }
+
+
+  /*
+  * CARDS
+  */
+
+  .card {
+    width: 40%;
+  }
+
 
 }
 
@@ -106,5 +195,16 @@ body {
   .nav-container{
     margin: 0 auto;
     width: 1400px;
+  }
+
+  .locations-container {
+    margin: 0 auto;
+    width: 1400px;
+    padding: 0;
+  }
+  .card {
+    margin: 1rem;
+    width: 25%;
+    margin: 1rem auto;
   }
 }
