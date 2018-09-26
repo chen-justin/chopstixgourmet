@@ -173,8 +173,12 @@ ul {
 
 @media only screen and (min-width:800px) {
   .logo{
-    font-size: 1rem;
+    font-size: 2rem;
     margin-left: 0;
+  }
+
+  .splash span {
+    padding: 30vh 15vw;
   }
 
 
@@ -195,6 +199,10 @@ ul {
   .nav-container{
     margin: 0 auto;
     width: 1400px;
+  }
+
+  .splash span {
+    padding: 40vh 15vw;
   }
 
   .locations-container {
