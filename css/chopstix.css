@@ -14,7 +14,9 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: rgba(43, 43, 43, 1);
+  background-color: rgba(250, 250, 250, 1);
+  transition: .3s;
 }
 
 ul {
@@ -202,7 +204,12 @@ ul {
   }
 
   .splash span {
-    padding: 40vh 15vw;
+    padding: 30vh 15vw;
+  }
+  
+  .locations h1{
+    text-align: center;
+    font-family: 
   }
 
   .locations-container {
@@ -212,7 +219,7 @@ ul {
   }
   .card {
     margin: 1rem;
-    width: 25%;
+    width: 27%;
     margin: 1rem auto;
   }
 }
