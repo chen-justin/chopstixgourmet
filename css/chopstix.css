@@ -121,7 +121,7 @@ ul {
 }
 
 .title{
-  text-align: center;
+  padding-left: 1rem;
   font-size: 2rem;
   margin: 1rem 0;
   font-weight: bold;
@@ -134,10 +134,11 @@ ul {
 .card {
   background-color: rgba(33, 33, 33, 1);
   background-color: rgba(240, 240, 240, 1);
-  padding: .5rem 0;
+  padding: 1rem 0;
+  padding-bottom: 3rem;
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
   color: rgba(33, 33, 33, 1);
 }
 
