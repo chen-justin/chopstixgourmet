@@ -1,0 +1,72 @@
+/*
+* CARDS
+*/
+.card {
+    background-color: $not-so-white;
+    color: $primary-dark;
+  
+    background-color: $primary-dark;
+    color: $not-so-white;
+  
+    padding-bottom: 1rem;
+    width: 100%;
+    border-bottom: 3px $primary-dark solid;
+    margin: 0 .5rem;
+    margin-bottom: 2rem;
+  
+    
+    .card-title {
+      padding-top: 1rem;
+      font-size: 2rem;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .card-image {
+      width: 100%;
+      height: auto;
+    }
+    
+  
+    .card-content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0rem;
+      text-align: center;
+      li {
+        line-height: 1.5rem;
+      }
+    }
+    
+    .card-description {
+      font-size: 1.2rem;
+      font-weight: bold;
+      overflow-wrap: break-word;
+      vertical-align: center;
+      width: 100%;
+  
+      p {
+        line-height: 1.5 rem;
+      }
+    }
+  
+    .card-links {
+      li{
+        margin-right: 1rem;
+        padding: .5rem 0;
+      }
+      i {
+        padding-right: 1rem;
+      }
+      a {
+        color: $not-so-white;
+        padding: .5rem;
+        border: solid 1px;
+      }
+      a:hover {
+        color: rgb(255, 80, 80);
+        transition: .3s;
+      }
+    }
+}

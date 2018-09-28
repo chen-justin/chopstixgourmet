@@ -1,146 +1,22 @@
-body {
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: Montserrat, sans-serif;
-  width: 100%; }
-
-a {
-  text-decoration: none;
-  color: #141414; }
-  a a:hover {
-    color: red;
-    transition: .3s; }
-
-p {
+html,
+body,
+p,
+ul,
+ol {
   margin: 0;
   padding: 0; }
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.nav-wrapper {
-  position: fixed;
-  width: 100%;
-  /*background-color: $primary-dark;*/ }
-  .nav-wrapper .nav-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 10px; }
-  .nav-wrapper a {
-    text-decoration: none;
-    color: #fafafa;
-    position: relative; }
-  .nav-wrapper .nav-items {
-    display: flex; }
-    .nav-wrapper .nav-items a:after, .nav-wrapper .nav-items a:visited:after {
-      content: '';
-      height: 3px;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0%;
-      background: #fafafa;
-      transition: 0.2s; }
-    .nav-wrapper .nav-items a:hover:after, .nav-wrapper .nav-items a:visited:hover:after {
-      width: 100%; }
-  .nav-wrapper .nav-item {
-    font-weight: bold;
-    padding: 10px 20px; }
-
-.logo {
-  margin-left: 0;
-  margin-right: auto;
-  font-size: 2rem;
-  font-weight: 600; }
-
-.parallax {
-  background-image: url("../images/chopstix.jpg");
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.parallax-two {
-  background-color: #141414; }
-
-.splash {
-  padding: 22vh 0vh 20vh 0vh;
-  width: 100%;
-  color: #fafafa;
-  background-color: rgba(20, 20, 20, 0.5);
-  display: flex;
-  flex-direction: column; }
-  .splash .title {
-    font-size: 3rem;
-    padding: 0; }
-  .splash p {
-    font-size: 2rem;
-    padding: 1rem;
-    margin: auto;
-    align-items: center;
-    text-align: center;
-    text-shadow: 3px 3px rgba(20, 20, 20, 0.5); }
-  .splash a {
-    font-size: 2rem;
-    background-color: #141414;
-    color: #fafafa;
-    padding: 1rem;
-    margin: 2rem auto;
-    border: solid 2px;
-    align-items: center;
-    text-align: center; }
-
-.wrapper {
-  display: flex; }
-
-.about-container {
-  background-color: #141414; }
-  .about-container .about {
-    color: #fafafa;
-    padding: 2rem;
-    margin: auto; }
-    .about-container .about p {
-      font-size: 1.2rem;
-      padding: .5rem 0;
-      text-align: center; }
-
-.locations {
-  margin: auto;
-  width: 100%;
-  background-color: #fafafa; }
-  .locations .locations-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .locations .title {
-    color: #141414;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center; }
-
-.footer {
-  color: #fafafa;
-  background-color: #141414;
-  padding: 1rem;
-  text-align: right; }
 
 /*
 * CARDS
 */
 .card {
   background-color: #fafafa;
-  color: #141414;
+  color: #1e1e1e;
+  background-color: #1e1e1e;
+  color: #fafafa;
   padding-bottom: 1rem;
   width: 100%;
-  border-bottom: 3px #141414 solid;
+  border-bottom: 3px #1e1e1e solid;
   margin: 0 .5rem;
   margin-bottom: 2rem; }
   .card .card-title {
@@ -180,52 +56,171 @@ ul {
     color: #ff5050;
     transition: .3s; }
 
+body {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #1e1e1e; }
+  a a:hover {
+    color: red;
+    transition: .3s; }
+
+ul {
+  list-style: none; }
+
+.logo {
+  margin: auto;
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: 600; }
+
+.nav-wrapper {
+  position: fixed;
+  width: 100%;
+  transition: background-color 200ms linear;
+  font-weight: bold;
+  /*Below Mainly for the hover-effect*/ }
+  .nav-wrapper .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+  .nav-wrapper .nav-item {
+    padding: .5rem; }
+  .nav-wrapper a {
+    text-decoration: none;
+    color: #fafafa;
+    position: relative; }
+  .nav-wrapper .nav-items {
+    display: flex; }
+    .nav-wrapper .nav-items a:after, .nav-wrapper .nav-items a:visited:after {
+      content: '';
+      height: 3px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      background: #fafafa;
+      transition: 0.2s; }
+    .nav-wrapper .nav-items a:hover:after, .nav-wrapper .nav-items a:visited:hover:after {
+      width: 100%; }
+
+.nav-wrapper.scrolled {
+  background-color: rgba(30, 30, 30, 0.9);
+  transition: background-color 200ms linear; }
+
+.parallax {
+  background-image: url("../images/chopstix.jpg");
+  height: 100%;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.splash-container {
+  height: 70vh;
+  display: flex;
+  background-color: rgba(30, 30, 30, 0.3);
+  color: #fafafa; }
+
+.splash {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /*MENU Button in Splash*/ }
+  .splash .title {
+    font-size: 2rem;
+    padding: 0; }
+  .splash p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    text-shadow: 3px 3px rgba(30, 30, 30, 0.3); }
+  .splash a {
+    font-size: 1.2rem;
+    background-color: rgba(30, 30, 30, 0.9);
+    font-weight: bold;
+    color: #fafafa;
+    padding: 1rem;
+    margin: auto;
+    border: solid 2px;
+    text-align: center;
+    border-radius: 5px; }
+
+.about-container {
+  background-color: #1e1e1e;
+  padding: 1rem; }
+  .about-container .about {
+    border-top: solid #fafafa 2px;
+    border-bottom: solid #fafafa 2px;
+    color: #fafafa;
+    padding: .5rem;
+    margin: auto;
+    text-align: center; }
+    .about-container .about p {
+      font-size: 1.2rem;
+      padding: .5rem 0; }
+
+.locations-container {
+  margin: auto;
+  width: 100%;
+  background-color: #fafafa; }
+  .locations-container .locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .locations-container .title {
+    color: #1e1e1e;
+    padding: 1rem;
+    font-size: 2rem;
+    margin: auto;
+    border: 2px solid #1e1e1e;
+    font-weight: bold;
+    text-align: center; }
+
+.footer {
+  color: #fafafa;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  text-align: right; }
+
 @media only screen and (min-width: 700px) {
   .logo {
     font-size: 2rem;
     margin-left: 0; }
-  .splash span {
-    padding: 25vh 15vw; }
-  .parallax-two {
-    background-image: url("../images/chopstix_splash.jpg");
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+  .nav-container {
+    padding: 1rem 0; }
+    .nav-container .nav-item {
+      padding: 1rem;
+      font-size: 1.2rem; }
+  .splash .title {
+    font-size: 3rem; }
+  .splash p {
+    font-size: 2rem; }
+  .about-container {
+    padding: 2rem; }
+    .about-container .about {
+      padding: 1rem; }
+      .about-container .about p {
+        font-size: 1.2rem; }
+  /*Enables parallax for larger screens*/
+  .parallax {
+    background-attachment: fixed; }
   /*
   * CARDS
   */
   .card {
     width: 45%;
-    margin: 1rem auto;
-    /* Height of the Card's flavortext */ }
-    .card .card-description {
-      height: 2rem; }
-    .card .card-info {
-      display: inline; }
-    .card .hours p {
-      font-size: 1.2rem;
-      padding-bottom: .1rem; } }
-
-@media only screen and (min-width: 1000px) {
-  .logo {
-    font-size: 2rem;
-    margin-left: 0; }
-  /*
-  * CARDS
-  */
-  .card {
-    width: 31%; } }
+    margin: 1rem auto; } }
 
 @media only screen and (min-width: 1600px) {
   .nav-container {
     margin: 0 auto;
     width: 1600px; }
-  .splash {
-    padding: 22vh 0vh 20vh 0vh; }
-  .title {
-    text-align: center; }
   .about {
     width: 1600px; }
   .locations-container {
@@ -233,6 +228,5 @@ ul {
     width: 1600px;
     padding: 0; }
   .card {
-    margin: 1rem;
     width: 32%;
     margin: 1rem auto; } }

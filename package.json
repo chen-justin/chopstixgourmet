@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/chen-justin/chopstixgourmet#readme",
   "dependencies": {
+    "local-web-server": "^2.6.0",
     "node-sass": "^4.9.3",
     "scss": "^0.2.4"
   }

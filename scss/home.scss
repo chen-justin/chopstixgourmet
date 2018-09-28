@@ -1,17 +1,11 @@
-$primary-font: Montserrat, sans-serif;
-$primary-dark: rgb(20,20,20); 
-$primary-dark-transparent: rgba(20,20,20, .5); 
-$primary-dark-opaque:rgba(20,20,20, .7);
-$not-so-white: rgb(250,250,250);
-$greyish-white: rgb(235,235,235);
-
+@import 'reset';
+@import 'palette';
+@import 'cards';
 
 $width_widescreen: 1600px;
 
 body {
     text-decoration: none;
-    margin: 0;
-    padding: 0;
     font-size: 16px;
     font-family: $primary-font;
     width: 100%;
@@ -28,136 +22,136 @@ a {
     }
 }
 
-p {
-    margin: 0;
-    padding: 0;
-}
-
 ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+}
+
+.logo {
+  margin: auto;
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .nav-wrapper {
   position: fixed;
   width: 100%;
-  /*background-color: $primary-dark;*/
+  transition: background-color 200ms linear;
+  font-weight: bold;
+
   .nav-container {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      padding: 10px;
-  }
-
-  a {
-      text-decoration: none;
-      color: $not-so-white;
-      position: relative;
-  }
-
-  .nav-items {
-      display: flex;
-
-      a:after, a:visited:after {
-          content: '';
-          height: 3px;
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          width: 0%;
-          background: $not-so-white;
-          transition: 0.2s;
-      }
-
-      a:hover:after, a:visited:hover:after {
-          width: 100%;
-      }
   }
 
   .nav-item {
-      font-weight: bold;
-      padding: 10px 20px;
+      padding: .5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $not-so-white;
+    position: relative;
+  }
+
+  /*Below Mainly for the hover-effect*/
+  .nav-items {
+    display: flex;
+
+    a:after, a:visited:after {
+      content: '';
+      height: 3px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      background: $not-so-white;
+      transition: 0.2s;
+    }
+
+    a:hover:after, a:visited:hover:after {
+        width: 100%;
+    }
   }
 }
 
-.logo {
-  margin-left: 0;
-  margin-right: auto;
-  font-size: 2rem;
-  font-weight: 600;
+.nav-wrapper.scrolled {
+  background-color: $primary-dark-opaquer;
+  transition: background-color 200ms linear;
 }
 
 .parallax {
     background-image: url("../images/chopstix.jpg");
 
     height: 100%;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.parallax-two{
-  background-color: $primary-dark;
-}
-.splash {
-  padding: 22vh 0vh 20vh 0vh;
-  width: 100%;
-  color: $not-so-white;
+.splash-container {
+  height: 70vh;
+  display: flex;
   background-color: $primary-dark-transparent;
+  color: $not-so-white;
+}
+
+.splash {
+  margin: auto;
   display: flex;
   flex-direction: column;
   .title {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0;
   }
   p {
-      font-size: 2rem;
-      padding: 1rem;
-      margin: auto;
-      align-items: center;
-      text-align: center;
-      text-shadow: 3px 3px $primary-dark-transparent;
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    text-shadow: 3px 3px $primary-dark-transparent;
   }
 
+  /*MENU Button in Splash*/
   a {
-    font-size: 2rem;
-    background-color: $primary-dark;
+    font-size: 1.2rem;
+    background-color: $primary-dark-opaquer;
+    font-weight: bold;
     color: $not-so-white;
     padding: 1rem;
-    margin: 2rem auto;
+    margin: auto;
     border: solid 2px;
-    align-items: center;
     text-align: center;
+    border-radius: 5px;
   }
 }
 
 
-.wrapper {
-  display: flex;
-}
 .about-container {
   background-color: $primary-dark;
+  padding: 1rem;
   .about {
+    border-top: solid $not-so-white 2px;
+    border-bottom: solid $not-so-white 2px;
     color: $not-so-white;
-    padding: 2rem;
+    padding: .5rem;
     margin: auto;
+    text-align: center;
   
     p{
       font-size: 1.2rem;
       padding: .5rem 0;
-      text-align: center;
     }
   }
 }
 
-.locations {
+.locations-container {
   margin: auto;
   width: 100%;
   background-color: $not-so-white;
-  .locations-container{
+
+  .locations{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -165,8 +159,10 @@ ul {
 
   .title{
     color: $primary-dark;
-    padding: 2rem;
-    font-size: 3rem;
+    padding: 1rem;
+    font-size: 2rem;
+    margin: auto;
+    border: 2px solid $primary-dark;
     font-weight: bold;
     text-align: center;
   }
@@ -181,75 +177,6 @@ ul {
   text-align: right;
 }
   
-  
-/*
-* CARDS
-*/
-.card {
-  background-color: $not-so-white;
-  color: $primary-dark;
-  padding-bottom: 1rem;
-  width: 100%;
-  border-bottom: 3px $primary-dark solid;
-  margin: 0 .5rem;
-  margin-bottom: 2rem;
-
-  
-  .card-title {
-    padding-top: 1rem;
-    font-size: 2rem;
-    vertical-align: middle;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .card-image {
-    width: 100%;
-    height: auto;
-  }
-  
-
-  .card-content {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 0rem;
-    text-align: center;
-    li {
-      line-height: 1.5rem;
-    }
-  }
-  
-  .card-description {
-    font-size: 1.2rem;
-    font-weight: bold;
-    overflow-wrap: break-word;
-    vertical-align: center;
-    width: 100%;
-
-    p {
-      line-height: 1.5 rem;
-    }
-  }
-
-  .card-links {
-    li{
-      margin-right: 1rem;
-      padding: .5rem 0;
-    }
-    i {
-      padding-right: 1rem;
-    }
-    a {
-      color: $not-so-white;
-      padding: .5rem;
-      border: solid 1px;
-    }
-    a:hover {
-      color: rgb(255, 80, 80);
-      transition: .3s;
-    }
-  }
-}
 
   
   
@@ -260,18 +187,42 @@ ul {
     margin-left: 0;
   }
 
-  .splash span {
-    padding: 25vh 15vw;
+  .nav-container {
+    padding: 1rem 0;
+
+    .nav-item {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
   }
 
-  .parallax-two{
-    background-image: url("../images/chopstix_splash.jpg");
-  
-    height: 100%;
+  .splash {
+    .title {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+
+  .about-container {
+    padding: 2rem;
+    .about {
+      padding: 1rem;
+    
+      p{
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+
+  /*Enables parallax for larger screens*/
+  .parallax {
     background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   /*
@@ -281,55 +232,14 @@ ul {
   .card {
     width: 45%;
     margin: 1rem auto;
-
-    /* Height of the Card's flavortext */
-    .card-description {
-      height: 2rem;
-    }
-
-    .card-info {
-      display: inline;
-    }
-
-    .hours p{
-      font-size: 1.2rem;
-      padding-bottom: .1rem;
-    }
   }
-
-
-}
-@media only screen and (min-width:1000px) {
-  .logo{
-    font-size: 2rem;
-    margin-left: 0;
-  }
-
-  /*
-  * CARDS
-  */
-
-  .card {
-    width: 31%;
-  }
-
-
 }
 
+@media only screen and (min-width: $width_widescreen) {
 
-@media only screen and (min-width: 1600px) {
-
-  .nav-container{
+  .nav-container {
     margin: 0 auto;
-    width: 1600px;
-  }
-
-  .splash {
-    padding: 22vh 0vh 20vh 0vh;
-  }
-  
-  .title{
-    text-align: center;
+    width: $width_widescreen;
   }
 
   .about {
@@ -343,7 +253,6 @@ ul {
     padding: 0;
   }
   .card {
-    margin: 1rem;
     width: 32%;
     margin: 1rem auto;
   }
