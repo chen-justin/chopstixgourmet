@@ -8,7 +8,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #212121; }
+  color: #141414; }
   a a:hover {
     color: red;
     transition: .3s; }
@@ -23,7 +23,9 @@ ul {
   padding: 0; }
 
 .nav-wrapper {
-  background-color: #212121; }
+  position: fixed;
+  width: 100%;
+  /*background-color: $primary-dark;*/ }
   .nav-wrapper .nav-container {
     display: flex;
     flex-wrap: wrap;
@@ -52,82 +54,109 @@ ul {
     padding: 10px 20px; }
 
 .logo {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   font-size: 2rem;
   font-weight: 600; }
 
 .parallax {
-  background-image: url("../images/chopstix_splash.jpg");
+  background-image: url("../images/chopstix.jpg");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
+.parallax-two {
+  background-color: #141414; }
+
 .splash {
-  display: flex; }
-  .splash span {
+  padding: 22vh 0vh 20vh 0vh;
+  width: 100%;
+  color: #fafafa;
+  background-color: rgba(20, 20, 20, 0.5);
+  display: flex;
+  flex-direction: column; }
+  .splash .title {
+    font-size: 3rem;
+    padding: 0; }
+  .splash p {
     font-size: 2rem;
-    font-weight: 800;
-    padding: 15vh 0;
-    width: 100%;
-    color: #fafafa;
-    font-family: 'Open Sans', sans-serif;
+    padding: 1rem;
     margin: auto;
     align-items: center;
     text-align: center;
-    text-shadow: 3px 3px rgba(33, 33, 33, 0.5);
-    background-color: rgba(33, 33, 33, 0.5); }
+    text-shadow: 3px 3px rgba(20, 20, 20, 0.5); }
+  .splash a {
+    font-size: 2rem;
+    background-color: #141414;
+    color: #fafafa;
+    padding: 1rem;
+    margin: 2rem auto;
+    border: solid 2px;
+    align-items: center;
+    text-align: center; }
 
 .wrapper {
   display: flex; }
 
+.about-container {
+  background-color: #141414; }
+  .about-container .about {
+    color: #fafafa;
+    padding: 2rem;
+    margin: auto; }
+    .about-container .about p {
+      font-size: 1.2rem;
+      padding: .5rem 0;
+      text-align: center; }
+
 .locations {
-  color: #fafafa;
-  background-color: #212121;
   margin: auto;
-  width: 100%; }
+  width: 100%;
+  background-color: #fafafa; }
   .locations .locations-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
   .locations .title {
-    padding-left: 1.5rem;
-    font-size: 2rem;
-    margin: 1rem 0;
-    font-weight: bold; }
+    color: #141414;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center; }
 
 .footer {
   color: #fafafa;
-  background-color: #212121;
-  padding: 1rem; }
+  background-color: #141414;
+  padding: 1rem;
+  text-align: right; }
 
 /*
 * CARDS
 */
 .card {
-  background-color: #ebebeb;
-  padding: 1rem 0;
-  padding-bottom: 3rem;
+  background-color: #fafafa;
+  color: #141414;
+  padding-bottom: 1rem;
   width: 100%;
+  border-bottom: 3px #141414 solid;
   margin: 0 .5rem;
-  margin-bottom: 2rem;
-  color: #212121; }
+  margin-bottom: 2rem; }
   .card .card-title {
+    padding-top: 1rem;
     font-size: 2rem;
-    padding-bottom: .5rem;
-    padding-left: 1rem;
     vertical-align: middle;
-    font-weight: bold;
-    text-shadow: 2px 1px rgba(33, 33, 33, 0.5); }
+    text-align: center;
+    font-weight: bold; }
   .card .card-image {
     width: 100%;
     height: auto; }
   .card .card-content {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 2rem; }
+    padding: 0 0rem;
+    text-align: center; }
     .card .card-content li {
       line-height: 1.5rem; }
   .card .card-description {
@@ -135,7 +164,6 @@ ul {
     font-weight: bold;
     overflow-wrap: break-word;
     vertical-align: center;
-    padding: 2rem 0;
     width: 100%; }
     .card .card-description p {
       line-height: 1.5 rem; }
@@ -144,6 +172,10 @@ ul {
     padding: .5rem 0; }
   .card .card-links i {
     padding-right: 1rem; }
+  .card .card-links a {
+    color: #fafafa;
+    padding: .5rem;
+    border: solid 1px; }
   .card .card-links a:hover {
     color: #ff5050;
     transition: .3s; }
@@ -154,6 +186,13 @@ ul {
     margin-left: 0; }
   .splash span {
     padding: 25vh 15vw; }
+  .parallax-two {
+    background-image: url("../images/chopstix_splash.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
   /*
   * CARDS
   */
@@ -183,10 +222,12 @@ ul {
   .nav-container {
     margin: 0 auto;
     width: 1600px; }
-  .splash span {
-    padding: 30vh 15vw; }
+  .splash {
+    padding: 22vh 0vh 20vh 0vh; }
   .title {
     text-align: center; }
+  .about {
+    width: 1600px; }
   .locations-container {
     margin: 0 auto;
     width: 1600px;

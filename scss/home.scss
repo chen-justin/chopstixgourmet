@@ -1,8 +1,12 @@
 $primary-font: Montserrat, sans-serif;
-$primary-dark: rgb(33,33,33); 
-$primary-dark-transparent: rgba(33,33,33, .5); 
+$primary-dark: rgb(20,20,20); 
+$primary-dark-transparent: rgba(20,20,20, .5); 
+$primary-dark-opaque:rgba(20,20,20, .7);
 $not-so-white: rgb(250,250,250);
 $greyish-white: rgb(235,235,235);
+
+
+$width_widescreen: 1600px;
 
 body {
     text-decoration: none;
@@ -12,6 +16,7 @@ body {
     font-family: $primary-font;
     width: 100%;
 }
+
 
 a {
     text-decoration: none;
@@ -35,55 +40,57 @@ ul {
 }
 
 .nav-wrapper {
-    background-color: $primary-dark;
-    .nav-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-    }
+  position: fixed;
+  width: 100%;
+  /*background-color: $primary-dark;*/
+  .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+  }
 
-    a {
-        text-decoration: none;
-        color: $not-so-white;
-        position: relative;
-    }
+  a {
+      text-decoration: none;
+      color: $not-so-white;
+      position: relative;
+  }
 
-    .nav-items {
-        display: flex;
+  .nav-items {
+      display: flex;
 
-        a:after, a:visited:after {
-            content: '';
-            height: 3px;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0%;
-            background: $not-so-white;
-            transition: 0.2s;
-        }
+      a:after, a:visited:after {
+          content: '';
+          height: 3px;
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0%;
+          background: $not-so-white;
+          transition: 0.2s;
+      }
 
-        a:hover:after, a:visited:hover:after {
-            width: 100%;
-        }
-    }
+      a:hover:after, a:visited:hover:after {
+          width: 100%;
+      }
+  }
 
-    .nav-item {
-        font-weight: bold;
-        padding: 10px 20px;
-    }
+  .nav-item {
+      font-weight: bold;
+      padding: 10px 20px;
+  }
 }
 
 .logo {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   font-size: 2rem;
   font-weight: 600;
 }
 
 .parallax {
-    background-image: url("../images/chopstix_splash.jpg");
+    background-image: url("../images/chopstix.jpg");
 
     height: 100%;
     background-attachment: fixed;
@@ -92,35 +99,64 @@ ul {
     background-size: cover;
 }
 
-.splash {
-    display: flex;
-
-    span {
-        font-size: 2rem;
-        font-weight: 800;
-        padding: 15vh 0;
-        width: 100%;
-        color: $not-so-white;
-        font-family: 'Open Sans', sans-serif;
-        margin: auto;
-        align-items: center;
-        text-align: center;
-        text-shadow: 3px 3px $primary-dark-transparent;
-        background-color: $primary-dark-transparent;
-    }
+.parallax-two{
+  background-color: $primary-dark;
 }
+.splash {
+  padding: 22vh 0vh 20vh 0vh;
+  width: 100%;
+  color: $not-so-white;
+  background-color: $primary-dark-transparent;
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 3rem;
+    padding: 0;
+  }
+  p {
+      font-size: 2rem;
+      padding: 1rem;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      text-shadow: 3px 3px $primary-dark-transparent;
+  }
+
+  a {
+    font-size: 2rem;
+    background-color: $primary-dark;
+    color: $not-so-white;
+    padding: 1rem;
+    margin: 2rem auto;
+    border: solid 2px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 
 .wrapper {
-    display: flex;
+  display: flex;
+}
+.about-container {
+  background-color: $primary-dark;
+  .about {
+    color: $not-so-white;
+    padding: 2rem;
+    margin: auto;
+  
+    p{
+      font-size: 1.2rem;
+      padding: .5rem 0;
+      text-align: center;
+    }
+  }
 }
 
-
 .locations {
-  color: $not-so-white;
-  background-color: $primary-dark;
   margin: auto;
   width: 100%;
-
+  background-color: $not-so-white;
   .locations-container{
     display: flex;
     flex-wrap: wrap;
@@ -128,18 +164,21 @@ ul {
   }
 
   .title{
-    padding-left: 1.5rem;
-    font-size: 2rem;
-    margin: 1rem 0;
+    color: $primary-dark;
+    padding: 2rem;
+    font-size: 3rem;
     font-weight: bold;
+    text-align: center;
   }
 
 }
+
 
 .footer {
   color: $not-so-white;
   background-color: $primary-dark;
   padding: 1rem;
+  text-align: right;
 }
   
   
@@ -147,22 +186,21 @@ ul {
 * CARDS
 */
 .card {
-  background-color: $greyish-white;
-  padding: 1rem 0;
-  padding-bottom: 3rem;
+  background-color: $not-so-white;
+  color: $primary-dark;
+  padding-bottom: 1rem;
   width: 100%;
+  border-bottom: 3px $primary-dark solid;
   margin: 0 .5rem;
   margin-bottom: 2rem;
-  color: $primary-dark;
 
   
   .card-title {
+    padding-top: 1rem;
     font-size: 2rem;
-    padding-bottom: .5rem;
-    padding-left: 1rem;
     vertical-align: middle;
+    text-align: center;
     font-weight: bold;
-    text-shadow: 2px 1px $primary-dark-transparent;
   }
   
   .card-image {
@@ -174,7 +212,8 @@ ul {
   .card-content {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 2rem;
+    padding: 0 0rem;
+    text-align: center;
     li {
       line-height: 1.5rem;
     }
@@ -185,7 +224,6 @@ ul {
     font-weight: bold;
     overflow-wrap: break-word;
     vertical-align: center;
-    padding: 2rem 0;
     width: 100%;
 
     p {
@@ -200,6 +238,11 @@ ul {
     }
     i {
       padding-right: 1rem;
+    }
+    a {
+      color: $not-so-white;
+      padding: .5rem;
+      border: solid 1px;
     }
     a:hover {
       color: rgb(255, 80, 80);
@@ -219,6 +262,16 @@ ul {
 
   .splash span {
     padding: 25vh 15vw;
+  }
+
+  .parallax-two{
+    background-image: url("../images/chopstix_splash.jpg");
+  
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   /*
@@ -271,17 +324,22 @@ ul {
     width: 1600px;
   }
 
-  .splash span {
-    padding: 30vh 15vw;
+  .splash {
+    padding: 22vh 0vh 20vh 0vh;
   }
   
   .title{
     text-align: center;
   }
 
+  .about {
+    width: $width_widescreen;
+  }
+
+
   .locations-container {
     margin: 0 auto;
-    width: 1600px;
+    width: $width_widescreen;
     padding: 0;
   }
   .card {
