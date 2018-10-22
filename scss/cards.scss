@@ -1,72 +1,115 @@
 /*
 * CARDS
 */
+@import "palette";
+
 .card {
-    background-color: $not-so-white;
-    color: $primary-dark;
-  
-    background-color: $primary-dark;
-    color: $not-so-white;
-  
-    padding-bottom: 1rem;
-    width: 100%;
-    border-bottom: 3px $primary-dark solid;
-    margin: 0 .5rem;
-    margin-bottom: 2rem;
-  
-    
-    .card-title {
-      padding-top: 1rem;
-      font-size: 2rem;
-      vertical-align: middle;
-      text-align: center;
-      font-weight: bold;
-    }
-    
-    .card-image {
-      width: 100%;
-      height: auto;
-    }
-    
-  
-    .card-content {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 0rem;
-      text-align: center;
-      li {
-        line-height: 1.5rem;
-      }
-    }
-    
-    .card-description {
-      font-size: 1.2rem;
-      font-weight: bold;
-      overflow-wrap: break-word;
-      vertical-align: center;
-      width: 100%;
-  
-      p {
-        line-height: 1.5 rem;
-      }
-    }
-  
-    .card-links {
-      li{
-        margin-right: 1rem;
-        padding: .5rem 0;
-      }
-      i {
-        padding-right: 1rem;
-      }
-      a {
-        color: $not-so-white;
-        padding: .5rem;
-        border: solid 1px;
-      }
-      a:hover {
-        color: rgb(255, 80, 80);
-        transition: .3s;
-      }
-    }
+  flex: 0 1 90%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $gutter;
 }
+
+.card-image {
+  display: block;
+  border-radius: 3px 3px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: $gutter $gutter-wide;
+  padding-bottom: $gutter-wide;
+  box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease;
+  background-color: white;
+  color: $body-text;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.card-details{
+  line-height: 1.7rem;
+}
+
+.card-links {
+  line-height: 1.7rem;
+  display: flex;
+  a {
+    flex: 1 1 40%;
+  }
+}
+
+
+// .card {
+//     background-color: $not-so-white;
+//     color: $primary-dark;
+//     margin: 0;
+//     border-bottom: 3px $primary-dark-opaquer solid;
+//     flex: 0 1 100%;
+  
+//     .card-title {
+//       font-size: 2rem;
+//       text-align: center;
+//       font-weight: bold;
+//     }
+    
+//     .card-image {
+//       width: 100%;
+//       height: auto;
+//     }
+    
+  
+//     .card-content {
+//       display: flex;
+//       flex-wrap: wrap;
+//       padding: 0;
+//       text-align: center;
+//       li {
+//         line-height: 1.5rem;
+//       }
+//     }
+    
+//     .card-description {
+//       overflow-wrap: break-word;
+//       vertical-align: center;
+//       line-height: 1.2rem;
+//       width: 100%;
+//       font-size: 1.1rem;
+//     }
+  
+//     .card-links {
+//       display: flex;
+//       justify-content: space-evenly;
+//       width: 100%;
+//       a {
+//         flex: 0 1 25%;
+//         background-color: $primary-red;
+//         color: $not-so-white;
+//         border-radius: 3px;
+//         margin: 20px;
+//         padding: 20px;
+//         transition: .3s;
+//       }
+
+//       a:hover {
+//         background-color: $primary-subdued-red;
+//         color: white;
+//         transition: .3s;
+//       }
+//     }
+// }
+
+// .card a {
+//   font-size: 1.2rem;
+//   margin: 10px auto;
+//   transition: .3s;
+// }
+
+// .card a:hover {
+//   color: $primary-red;
+//   transition: .3s;
+// }

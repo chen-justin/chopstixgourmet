@@ -1,33 +1,39 @@
-@import 'reset';
-@import 'palette';
-@import 'cards';
+@import "palette";
+@import "cards";
 
-$width_widescreen: 1600px;
-
-body {
-    text-decoration: none;
-    font-size: 16px;
-    font-family: $primary-font;
-    width: 100%;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
+body {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: $primary-font;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
 
 a {
-    text-decoration: none;
-    color: $primary-dark;
-
-    a:hover {
-        color: red;
-        transition: .3s;
-    }
+  text-decoration: none;
+  color: $primary-dark;
+  a:hover {
+    color: red;
+    transition: 0.3s;
+  }
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .logo {
-  margin: auto;
+  display: none;
   padding: 0 1rem;
   font-size: 2rem;
   font-weight: 600;
@@ -40,14 +46,13 @@ ul {
   font-weight: bold;
 
   .nav-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-item {
-      padding: .5rem;
+    padding: 20px 5px;
   }
 
   a {
@@ -60,8 +65,9 @@ ul {
   .nav-items {
     display: flex;
 
-    a:after, a:visited:after {
-      content: '';
+    a:after,
+    a:visited:after {
+      content: "";
       height: 3px;
       position: absolute;
       bottom: -5px;
@@ -71,8 +77,9 @@ ul {
       transition: 0.2s;
     }
 
-    a:hover:after, a:visited:hover:after {
-        width: 100%;
+    a:hover:after,
+    a:visited:hover:after {
+      width: 100%;
     }
   }
 }
@@ -83,13 +90,13 @@ ul {
 }
 
 .parallax {
-    background-image: url("../images/chopstix.jpg");
+  background-image: url("../images/chopstix.jpg");
 
-    height: 100%;
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100%;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .splash-container {
   height: 70vh;
@@ -105,10 +112,11 @@ ul {
   .title {
     font-size: 2rem;
     padding: 0;
+    margin: 0;
+    margin-top: 60px;
   }
   p {
     font-size: 1.2rem;
-    padding: 1rem;
     text-align: center;
     text-shadow: 3px 3px $primary-dark-transparent;
   }
@@ -116,59 +124,55 @@ ul {
   /*MENU Button in Splash*/
   a {
     font-size: 1.2rem;
-    background-color: $primary-dark-opaquer;
+    background-color: $primary-red;
     font-weight: bold;
     color: $not-so-white;
-    padding: 1rem;
+    padding: 15px 20px;
     margin: auto;
-    border: solid 2px;
+    margin-top: 60px;
     text-align: center;
     border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    background-color: $primary-subdued-red;
+    transition: 0.3s;
   }
 }
 
-
 .about-container {
   background-color: $primary-dark;
-  padding: 1rem;
   .about {
-    border-top: solid $not-so-white 2px;
-    border-bottom: solid $not-so-white 2px;
-    color: $not-so-white;
-    padding: .5rem;
+    color: $greyish-white;
+    padding: $gutter;
     margin: auto;
     text-align: center;
-  
-    p{
+
+    p {
       font-size: 1.2rem;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
     }
   }
 }
 
 .locations-container {
-  margin: auto;
-  width: 100%;
-  background-color: $not-so-white;
-
-  .locations{
+  background-color: $greyish-white;
+  padding-bottom: $gutter-wide;
+  .locations {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
-  .title{
+  .title {
     color: $primary-dark;
-    padding: 1rem;
+    padding: 40px 0;
     font-size: 2rem;
-    margin: auto;
-    border: 2px solid $primary-dark;
     font-weight: bold;
     text-align: center;
   }
-
 }
-
 
 .footer {
   color: $not-so-white;
@@ -176,25 +180,16 @@ ul {
   padding: 1rem;
   text-align: right;
 }
-  
 
-  
-  
-    
-@media only screen and (min-width:700px) {
-  .logo{
+@media only screen and (min-width: 767px) {
+  .logo {
+    display: block;
     font-size: 2rem;
-    margin-left: 0;
+    margin-right: auto;
   }
 
   .nav-container {
-    padding: 1rem 0;
-
-    .nav-item {
-      padding: 1rem;
-      font-size: 1.2rem;
-    }
-
+    justify-content: flex-start;
   }
 
   .splash {
@@ -204,21 +199,23 @@ ul {
 
     p {
       font-size: 2rem;
+      margin: 0;
     }
   }
 
+  .about {
+    width: 700px;
+  }
 
   .about-container {
-    padding: 2rem;
+    padding: $gutter;
     .about {
-      padding: 1rem;
-    
-      p{
+      padding: $gutter;
+      p {
         font-size: 1.2rem;
       }
     }
   }
-
 
   /*Enables parallax for larger screens*/
   .parallax {
@@ -230,30 +227,22 @@ ul {
   */
 
   .card {
-    width: 45%;
-    margin: 1rem auto;
+    flex-basis: 30%;
   }
 }
 
 @media only screen and (min-width: $width_widescreen) {
-
   .nav-container {
     margin: 0 auto;
     width: $width_widescreen;
   }
 
-  .about {
-    width: $width_widescreen;
-  }
-
-
-  .locations-container {
+  .locations {
     margin: 0 auto;
     width: $width_widescreen;
     padding: 0;
   }
   .card {
     width: 32%;
-    margin: 1rem auto;
   }
 }
